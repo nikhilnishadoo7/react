@@ -17,6 +17,17 @@ function App() {
     setcounter(counter);
   }
 
+
+  function removeval(){
+    console.log(counter);
+    if(counter>=1){
+    counter -=1;
+    setcounter(counter);
+    }
+    else{ 
+      setcounter(counter);
+    }
+  }
   return (
     <>
       <h1>counter app</h1>
@@ -24,7 +35,9 @@ function App() {
       <button 
       onClick={addval}
       >add +1</button>
-      <button>remove -1</button>
+      <button
+      onClick={removeval}
+      >remove -1</button>
     </>
   )
 }
